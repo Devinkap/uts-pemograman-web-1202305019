@@ -1,4 +1,5 @@
 <?php
+// penempatan edit php
 // edit.php
 require_once 'config.php';
 
