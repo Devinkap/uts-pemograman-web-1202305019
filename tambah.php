@@ -22,7 +22,7 @@ try {
         // Tampilkan info debug (akan muncul di log error)
         error_log("Kolom yang tersedia di database: " . implode(', ', $column_names));
         
-        // Cek apakah kolom nomor_seri ada
+        // Cek kolom nomor_seri ada
         if (!in_array('nomor_seri', $column_names)) {
             $error = "Kolom 'nomor_seri' tidak ditemukan. Kolom yang tersedia: " . implode(', ', $column_names);
         }
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && empty($error)) {
     $kondisi = $_POST['kondisi'];
     $catatan = trim($_POST['catatan']);
 
-    // Validasi input
+    // input database
     if (empty($nama_alat) || empty($merk) || empty($nomor_seri) || empty($lokasi_alat) || empty($tanggal_masuk) || empty($kondisi)) {
         $error = "Semua field bertanda * harus diisi!";
     } else {
