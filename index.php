@@ -2,7 +2,7 @@
 // index.php
 require_once 'config.php';
 
-// Handle delete
+// bagian delete
 if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
     try {
@@ -28,6 +28,7 @@ if (isset($_GET['search'])) {
 $alat = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
+<!-- mengedit title awal-->
 <!DOCTYPE html>
 <html lang="id">
 <head>
